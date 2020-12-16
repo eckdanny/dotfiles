@@ -1,9 +1,9 @@
 ## Installation
 
 ```diff
-  # Path to your oh-my-zsh installation.
-  export ZSH="/Users/deck/.oh-my-zsh"
-+ export ZSH_CUSTOM="/Users/deck/.oh-my-zsh.eckdanny"
+  # Would you like to use another custom folder than $ZSH/custom?
+  # ZSH_CUSTOM=/path/to/new-custom-folder
++ ZSH_CUSTOM="/Users/deck/dotfiles/ohmyzsh"
 ```
 
 then set the theme
