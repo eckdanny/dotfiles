@@ -18,7 +18,6 @@ Managed with [homebrew][homebrew]:
 ~/brew.sh
 ```
 
-
 ### `ohmyzsh`
 
 Update your `.zshrc` with the following after a [fresh install of `oh-my-zsh`](https://github.com/ohmyzsh/ohmyzsh#basic-installation):
@@ -44,6 +43,34 @@ head to plugins:
 ```
 
 <!-- TODO: `nvm`, `conda`, ... stuff in `.zshrc` ... -->
+
+### `vscode`
+
+<!-- TODO: how could one fork this? (vscode does authz via github) -->
+
+Use [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync) to import extensions, key-bindings, snippets, etc.
+
+My extentions usually include:
+
+ - [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
+ - [Live Share](https://docs.microsoft.com/en-us/visualstudio/liveshare/use/vscode)
+ - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+ - [Atlasian: Jira & BitBucket](https://marketplace.visualstudio.com/items?itemName=Atlassian.atlascode)
+
+ My keybindings usually include:
+
+ ```json
+  ...
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "terminalFocus"
+  }
+ ```
 
 ## Author
 
