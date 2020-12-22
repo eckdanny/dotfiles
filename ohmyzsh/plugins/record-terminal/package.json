@@ -1,0 +1,9 @@
+{
+  "name": "record-terminal",
+  "version": "1.0.0",
+  "description": "Record terminal, export animaged SVG or GIF",
+  "author": "Danny Eck <eck.danny@gmail.com>",
+  "license": "MIT",
+  "bin": "record-terminal",
+  "private": true
+}
