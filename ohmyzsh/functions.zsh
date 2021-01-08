@@ -1,3 +1,6 @@
+# directory stack
+alias ds='dirs -v'
+
 # todo.sh stuff
 alias t='todo.sh'
 alias tls='t ls'
