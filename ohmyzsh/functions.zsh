@@ -19,3 +19,7 @@ alias agp='ag --pager LESS'
 #
 # git-open
 alias go='git open'
+
+#
+# git retry commit message
+alias gcr=git commit -t .git/COMMIT_EDITMSG
