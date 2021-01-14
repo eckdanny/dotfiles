@@ -13,6 +13,8 @@ if [[ ! -n $(command -v brew) ]]; then
   fi
 fi
 
+# TODO: include `nvm`
+
 FORMULAE=(
   "asciinema"
   "dos2unix"
