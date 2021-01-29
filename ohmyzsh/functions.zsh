@@ -4,7 +4,9 @@ alias ds='dirs -v'
 # todo.sh stuff
 alias t='todo.sh'
 alias tls='t ls'
-function tt() { t ls $1 | head ; }
+function ttop() { t ls $1 | head ; }
+alias tt=ttop
+
 #
 # Show/Hide Dekstop Icons
 alias desktopon='defaults write com.apple.finder CreateDesktop true; killall Finder'
