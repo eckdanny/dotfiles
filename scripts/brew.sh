@@ -16,6 +16,7 @@ fi
 # TODO: include `nvm`
 
 FORMULAE=(
+  "gcc"
   "asciinema"
   "dos2unix"
   "jq"
@@ -29,6 +30,9 @@ FORMULAE=(
 
 # Make sure we’re using the latest Homebrew.
 brew update
+
+# Add third-party respositories
+brew tap octopusdeploy/taps
 
 # Upgrade any already-installed formulae.
 brew upgrade

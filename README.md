@@ -1,26 +1,27 @@
 # `eckdanny`'s dotfiles
 
-My personal shell config, CLI utils, and `npm`/`yarn` bits...
+Get new machine up and running quickly with my preferred setup.
 
 ![Demo Reel](.github/demo.svg)
 
 ## Installation
 
 ```
-git clone https://github.com/eckdanny/dotfiles.git ~/.dotfiles && cd $_ && source bootstrap.sh
+git clone https://github.com/eckdanny/dotfiles.git ~/.dotfiles
+$_/bootstrap.sh
 ```
 
-### CLI utils
+### Misc Configuration Files
 
-Managed with [homebrew][homebrew]:
+This 
 
-```
-~/brew.sh
-```
+- `.tmux.conf`
+- `.todo.cfg`
+- `.vimrc`
 
-### `ohmyzsh`
+### `oh my zsh`
 
-Update your `.zshrc` with the following after a [fresh install of `oh-my-zsh`](https://github.com/ohmyzsh/ohmyzsh#basic-installation):
+Install [`oh-my-zsh`](https://github.com/ohmyzsh/ohmyzsh#basic-installation) and update `.zshrc`:
 
 ```diff
   # Would you like to use another custom folder than $ZSH/custom?
@@ -28,18 +29,18 @@ Update your `.zshrc` with the following after a [fresh install of `oh-my-zsh`](h
 + ZSH_CUSTOM="${HOME}/.dotfiles/ohmyzsh"
 ```
 
-then set the theme
+set the theme:
 
 ```diff
 - ZSH_THEME="robbyrussell"
 + ZSH_THEME="eckdanny"
 ```
 
-head to plugins:
+set plugins:
 
 ```diff
 - plugins=(git)
-+ plugins=(git tmux z docker docker-compose git-open)
++ plugins=(git ag tmux z docker docker-compose git-open)
 ```
 
 <!-- TODO: `nvm`, `conda`, ... stuff in `.zshrc` ... -->
@@ -48,29 +49,88 @@ head to plugins:
 
 <!-- TODO: how could one fork this? (vscode does authz via github) -->
 
-Use [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync) to import extensions, key-bindings, snippets, etc.
+Use <samp>@code</samp>'s [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync) feature to import extensions, key-bindings, snippets, etc.
 
-My extentions usually include:
+_My_ extentions usually include:
 
- - [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
- - [Live Share](https://docs.microsoft.com/en-us/visualstudio/liveshare/use/vscode)
- - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
- - [Atlasian: Jira & BitBucket](https://marketplace.visualstudio.com/items?itemName=Atlassian.atlascode)
+- [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
+- [Live Share](https://docs.microsoft.com/en-us/visualstudio/liveshare/use/vscode)
+- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- [Atlasian: Jira & BitBucket](https://marketplace.visualstudio.com/items?itemName=Atlassian.atlascode)
 
- My keybindings usually include:
+_My_ keybindings usually include:
 
- ```json
-  ...
-  {
-    "key": "cmd+k",
-    "command": "workbench.action.terminal.focus"
-  },
-  {
-    "key": "cmd+k",
-    "command": "workbench.action.focusFirstEditorGroup",
-    "when": "terminalFocus"
-  }
- ```
+```json
+ ...
+ {
+   "key": "cmd+k",
+   "command": "workbench.action.terminal.focus"
+ },
+ {
+   "key": "cmd+k",
+   "command": "workbench.action.focusFirstEditorGroup",
+   "when": "terminalFocus"
+ }
+```
+
+### Commands and Aliases
+
+#### Misc
+
+##### `ds` - Directory Stack
+
+Prints directory stack. Helpful for navigating the <samp>zsh</samp> directory stack.
+
+##### `yc` - Yank Command
+
+Copies last command (from <samp>history</samp>) to clipboard with line numbers and newlines removed.
+
+```
+$ something
+```
+
+#### [`todo.sh`](https://github.com/todotxt/todo.txt-cli "GitHub")
+
+asdlfk
+
+##### `t` (alias for `todo.sh`)
+
+##### `tls` (alias for `todo.sh list [TERM...]`)
+
+List todos.
+
+##### `tt` (alias for `todo.sh list $1`)
+
+<details>
+  <summary>examples</summary>
+
+```bash
+tt              #
+tt +project     #
+tt @context     #
+```
+
+</details>
+
+#### `git`
+
+So long as `git` is in the plugins ([aliases](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git#aliases "GitHub"))
+
+##### `go` (Git Open)
+
+asdfa
+
+##### `gcF`
+
+Alias for `git commit --no-verify`.
+
+##### `gcr`
+
+Retry a git commit message. This is helpful if a git hook is present (e.g., <samp>husky</samp>, <samp>commitizen</samp>)
+
+#### [`ag` (Silver Searcher)](https://github.com/ggreer/the_silver_searcher "GitHub")
+
+The <samp>ag</samp> (the Silver Searcher)
 
 ## Author
 

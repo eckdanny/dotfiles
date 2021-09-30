@@ -30,5 +30,5 @@ alias gcr=git commit -t .git/COMMIT_EDITMSG
 #
 # copy last command to clipboard (yank command)
 function yc() {
-  history | tail -n 1 | tr -s ' ' | cut -d ' ' -f2- | tr -d '\n' | pbcopy
+  history | tail -n 1 | cut -c 8- | tr -d '\n' | pbcopy
 }
