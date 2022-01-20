@@ -13,6 +13,10 @@ if [[ ! -n $(command -v brew) ]]; then
   fi
 fi
 
+# TODO: set perms
+# /usr/local/share/zsh
+# /usr/local/share/zsh/site-functions
+
 # TODO: include `nvm`
 
 FORMULAE=(
@@ -25,7 +29,9 @@ FORMULAE=(
   "the_silver_searcher"
   "tmux"
   "todo-txt"
-  "tree"
+  "tree",
+  "dive",
+  "fly"
 )
 
 # Make sure we’re using the latest Homebrew.
